@@ -1,0 +1,4 @@
+-- 코드를 입력하세요
+SELECT COUNT(DISTINCT(a.NAME)) as 'count'
+  FROM ANIMAL_INS a
+ WHERE a.NAME IS NOT NULL
