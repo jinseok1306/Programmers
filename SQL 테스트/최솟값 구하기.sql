@@ -1,5 +1,3 @@
 -- 코드를 입력하세요
-SELECT a.DATETIME as '시간'
+SELECT MIN(a.DATETIME) as '시간'
   FROM ANIMAL_INS a
- ORDER BY a.DATETIME
- LIMIT 1
