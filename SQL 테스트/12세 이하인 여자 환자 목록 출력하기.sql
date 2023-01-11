@@ -1,0 +1,6 @@
+-- 코드를 입력하세요
+SELECT a.PT_NAME, a.PT_NO, a.GEND_CD, a.AGE, IFNULL(a.TLNO,'NONE') as 'TLNO'
+  FROM PATIENT a
+ WHERE AGE <= 12
+   AND GEND_CD = 'W'
+ ORDER BY a.AGE desc, a.PT_NAME
