@@ -1,0 +1,5 @@
+-- 코드를 입력하세요
+SELECT COUNT(*) as 'USERS'
+  FROM USER_INFO a
+ WHERE AGE IS NULL
+ 
