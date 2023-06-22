@@ -1,0 +1,9 @@
+-- 코드를 입력하세요
+SELECT b.AUTHOR_ID, c.AUTHOR_NAME, b.CATEGORY, SUM(a.SALES * b.PRICE) AS TOTAL_SALES
+  FROM BOOK_SALES a LEFT JOIN BOOK b
+                           ON b.BOOK_ID = a.BOOK_ID
+                    LEFT JOIN AUTHOR c
+                           ON c.AUTHOR_ID = b.AUTHOR_ID
+ WHERE DATE_FORMAT(a.SALES_DATE,'%Y-%m') = '2022-01'       
+ GROUP BY b.AUTHOR_ID, b.CATEGORY 
+ ORDER BY b.AUTHOR_ID ASC, b.CATEGORY DESC
