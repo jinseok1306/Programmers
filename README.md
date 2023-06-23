@@ -318,7 +318,41 @@ arr.some((v)=>{
 
 ### 2. Mysql  
 1\) 요일 구하기
+``` sql
+SELECT DAYOFWEEK(NOW())
+
+-- 1 = Sunday, 2 = Monday,..... 7 = Saturday
+```
 
 2\) 날짜 연산하기
+``` sql
+-- 현재 시간에 1초 더하기
+SELECT DATE_ADD(NOW(), INTERVAL 1 SECOND);
+
+-- 현재 시간에 1분 더하기
+SELECT DATE_ADD(NOW(), INTERVAL 1 MINUTE);
+
+-- 현재 시간에 1시간 더하기
+SELECT DATE_ADD(NOW(), INTERVAL 1 HOUR);
+
+-- 현재 시간에 1일 더하기
+SELECT DATE_ADD(NOW(), INTERVAL 1 DAY);
+
+-- 두 기간 사이의 일수 계산
+SELECT DATEDIFF('2021-12-31','2021-01-02');
+-- 결과 : 345
+```
 
 3\) 소수점 처리하기
+``` sql
+-- 반올림
+SELECT ROUND(2.62) 
+-- 결과 : 3
+
+-- 소수점 자르기
+SELECT TRUNCATE(2,62,0) 
+-- 결과 : 2
+```  
+
+4\) 
+
